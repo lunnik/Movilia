@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Movilia</string>
+    <string name="menuprincipal1">estamos en el menu principat</string>
+    <string name="MOVIL">MOVILIA</string>
 </resources>

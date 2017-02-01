@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -18,6 +19,7 @@ import java.util.TimerTask;
 
 public class Splashh extends AppCompatActivity {
 
+         TextView texto;
          private long splashRetraso=4000;
 
 
@@ -27,6 +29,9 @@ public class Splashh extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splashh);
+
+        texto=(TextView) findViewById(R.id.textView2);
+        texto.setText("MOVILIA");
 
           TimerTask task= new TimerTask() {
               @Override
