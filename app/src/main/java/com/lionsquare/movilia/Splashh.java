@@ -30,8 +30,8 @@ public class Splashh extends AppCompatActivity {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splashh);
 
-        texto=(TextView) findViewById(R.id.textView2);
-        texto.setText("MOVILIA");
+          texto=(TextView) findViewById(R.id.textView2);
+          texto.setText("MOVILIA");
 
           TimerTask task= new TimerTask() {
               @Override

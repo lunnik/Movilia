@@ -10,19 +10,31 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     tools:context="com.lionsquare.movilia.Splashh"
-    android:background="@drawable/ic_launcherxxxhdpi"
     >
 
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_launcherxxxhdpi"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
     <TextView
-        android:text="@string/MOVIL"
+        android:text="@string/moviliaa"
         android:textSize="30dp"
-        android:textColor="#005580"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
-        android:layout_marginTop="530dp"
+        android:layout_marginBottom="69dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+         />
 
-        />
+
+
+
 </RelativeLayout>
