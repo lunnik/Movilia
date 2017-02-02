@@ -9,32 +9,27 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="com.lionsquare.movilia.Splashh"
-    >
+    tools:context="com.lionsquare.movilia.Splashh">
 
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_launcherxxxhdpi"
-        android:id="@+id/imageView"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_launcherxxxhdpi" />
 
     <TextView
-        android:text="@string/moviliaa"
-        android:textSize="30dp"
-        android:textStyle="bold"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_marginBottom="69dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-         />
-
-
+        android:layout_marginBottom="69dp"
+        android:text="@string/moviliaa"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

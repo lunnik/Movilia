@@ -19,36 +19,34 @@ import java.util.TimerTask;
 
 public class Splashh extends AppCompatActivity {
 
-         TextView texto;
-         private long splashRetraso=4000;
-
+    TextView texto;
+    private long splashRetraso = 4000;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        //supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splashh);
 
-          texto=(TextView) findViewById(R.id.textView2);
-          texto.setText("MOVILIA");
+        texto = (TextView) findViewById(R.id.textView2);
+        texto.setText("MOVILIA");
 
-          TimerTask task= new TimerTask() {
-              @Override
-              public void run() {
-                  Intent NuevoLayout;
-                  NuevoLayout= new Intent(Splashh.this, MainActivity.class);
-                  startActivity(NuevoLayout);
-                  Splashh.this.finish();
-              }
-          };
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                Intent NuevoLayout;
+                NuevoLayout = new Intent(Splashh.this, MainActivity.class);
+                startActivity(NuevoLayout);
+                Splashh.this.finish();
+            }
+        };
 
-          Timer timer= new Timer();
+        Timer timer = new Timer();
         timer.schedule(task, splashRetraso);
-        }
-
-
-
     }
+
+
+}
 
 

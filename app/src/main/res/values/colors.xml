@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="primary_dark_act">#DAA750</color>
+    <color name="primary_act">#EBC75B</color>
+    <color name="text_color_act">#0a4d83</color>
+    <color name="accent_act">#0a4d83</color>
+    <color name="window_color_act">#FFF</color>
+    <color name="bar_color_act">#000000</color>
+    <color name="menu_color">#000000</color>
+
 </resources>

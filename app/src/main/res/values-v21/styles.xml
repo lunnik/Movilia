@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_act</item>
+        <item name="colorPrimaryDark">@color/primary_dark_act</item>
+        <item name="colorAccent">@color/accent_act</item>
+        <item name="android:navigationBarColor">@color/bar_color_act</item>
+        <item name="android:windowBackground">@color/window_color_act</item>
+        <item name="android:textColorPrimary">@color/text_color_act</item>
+        <item name="android:actionMenuTextColor">@android:color/black</item>
+
+
+    </style>
+</resources>
