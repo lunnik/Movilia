@@ -10,7 +10,7 @@
     <color name="text_color_act">#FF0000</color>
     <color name="accent_act">#006D5B</color>
     <color name="window_color_act">#AFAFAF</color>
-    <color name="bar_color_act">#000000</color>
+    <color name="bar_color_act">#006D5B</color>
     <color name="menu_color">#000000</color>
 
 </resources>
