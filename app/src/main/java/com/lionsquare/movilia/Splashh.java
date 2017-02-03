@@ -11,6 +11,7 @@ import android.view.Window;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -23,7 +24,7 @@ public class Splashh extends AppCompatActivity {
 
     TextView texto;
     private long splashRetraso = 4000;
-    protected static final int TIMER_RUNTIME=4000;
+    protected static final int TIMER_RUNTIME = 4000;
     protected boolean mbActive;
     protected ProgressBar aProgressBar;
 
@@ -32,6 +33,7 @@ public class Splashh extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splashh);
+        Fresco.initialize(this);//se incia fresco
 
         texto = (TextView) findViewById(R.id.textView2);
         texto.setText("MOVILIA");
@@ -72,12 +74,11 @@ public class Splashh extends AppCompatActivity {
         timerThread.start();
 
 
-
     }
 
     private void updateProgress(final int timePassed) {
-        if(null != aProgressBar){
-            final int progress= aProgressBar.getMax() * timePassed/TIMER_RUNTIME;
+        if (null != aProgressBar) {
+            final int progress = aProgressBar.getMax() * timePassed / TIMER_RUNTIME;
             aProgressBar.setProgress(progress);
         }
     }
@@ -87,11 +88,6 @@ public class Splashh extends AppCompatActivity {
 
         Log.d("mensaje final barra", "sus barra cargando");
     }
-
-
-
-
-
 
 
 }
