@@ -1,5 +1,7 @@
 package com.lionsquare.movilia;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -13,15 +15,14 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.lionsquare.movilia.fragments.MainFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView texto;
-
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-
 
 
     @Override
@@ -35,9 +36,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // TODO: 02/02/17 metodos para inicializar los componetes de cada vista
         initToolbar();
         initDrawer();
+        initFragment();
 
-        texto = (TextView) findViewById(R.id.textView);
-        texto.setText("estamos en el menu principal");
     }
 
     /**
@@ -60,6 +60,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Set up navigation drawer item clicks
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    /**
+     * se inicia el fragmento
+     **/
+
+    void initFragment() {
+        MainFragment mainFragment = new MainFragment();
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction ft = manager.beginTransaction();
+        manager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        ft.replace(R.id.frame_content, mainFragment);
+        ft.commit();
     }
 
     // TODO: 02/02/17 este metodo sirve para modificar los eventos del menu drawer
