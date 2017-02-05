@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Toolbar toolbar;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,11 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      */
     private void initDrawer() {
         // Set up the hamburger icon which will open/close nav drawer
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,
-                drawerLayout,
-                toolbar,
-                R.string.dashboard_open_nav_drawer,
-                R.string.dashboard_close_nav_drawer);
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.dashboard_open_nav_drawer, R.string.dashboard_close_nav_drawer);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
