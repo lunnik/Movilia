@@ -1,21 +1,14 @@
-package com.lionsquare.movilia;
+package com.lionsquare.movilia.activities;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Window;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
+import com.lionsquare.movilia.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

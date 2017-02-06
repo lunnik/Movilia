@@ -1,4 +1,4 @@
-package com.lionsquare.movilia;
+package com.lionsquare.movilia.activities;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.lionsquare.movilia.R;
 import com.lionsquare.movilia.fragments.MainFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
