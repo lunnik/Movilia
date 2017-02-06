@@ -10,20 +10,31 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.lionsquare.movilia.R;
+import com.lionsquare.movilia.custom_adapter.MainAdapter;
+import com.lionsquare.movilia.custom_adapter.MenuAdapter;
 import com.lionsquare.movilia.fragments.MainFragment;
+import com.lionsquare.movilia.model.Celulares;
+import com.lionsquare.movilia.model.Menu;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity implements MenuAdapter.ClickListener {
 
     TextView texto;
     DrawerLayout drawerLayout;
-    NavigationView navigationView;
     Toolbar toolbar;
+    RecyclerView recycler;
+    MenuAdapter menuAdapter;
+    List<Menu> menuList;
 
 
     @Override
@@ -32,8 +43,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         // TODO: 02/02/17  se insatcias las vistas de los menus y el toolbar
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        navigationView = (NavigationView) findViewById(R.id.navigation_view);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        recycler = (RecyclerView) findViewById(R.id.ndh_tv_menu);
         // TODO: 02/02/17 metodos para inicializar los componetes de cada vista
         initToolbar();
         initDrawer();
@@ -59,8 +70,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-        // Set up navigation drawer item clicks
-        navigationView.setNavigationItemSelectedListener(this);
+        menuList = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            menuList.add(new Menu("Titulo",
+                    R.mipmap.ic_launcher));
+        }
+
+        recycler.setHasFixedSize(true);
+        recycler.setLayoutManager(new GridLayoutManager(this, 2));
+
+        menuAdapter = new MenuAdapter(this, menuList);
+        recycler.setAdapter(menuAdapter);
+        menuAdapter.setClickListener(this);
     }
 
     /**
@@ -76,21 +97,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ft.commit();
     }
 
-    // TODO: 02/02/17 este metodo sirve para modificar los eventos del menu drawer
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        drawerLayout.closeDrawer(GravityCompat.START);
-        switch (item.getItemId()) {
-            case R.id.nav_posts:
-                //aqui se instacia un fragmento
-                return true;
-            case R.id.nav_collections:
-                //aqui se instacia un fragmento
-                return true;
-            // TODO: Implement after bookmarks functionality is completed.
 
-            default:
-                return false;
-        }
+    @Override
+    public void itemClicked(int position) {
+
     }
 }

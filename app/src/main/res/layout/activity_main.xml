@@ -16,17 +16,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/white"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/navigation_drawer_header"
-        app:itemBackground="@android:color/transparent"
-        app:itemIconTint="@drawable/selector_navigation_item"
-        app:itemTextColor="@drawable/selector_navigation_item"
-        app:menu="@menu/menu_navigation_drawer" />
+        android:orientation="vertical">
+
+        <include layout="@layout/navigation_drawer_header" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ndh_tv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
 
 </android.support.v4.widget.DrawerLayout>
