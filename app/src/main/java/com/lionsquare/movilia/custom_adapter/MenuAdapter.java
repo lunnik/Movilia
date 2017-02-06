@@ -17,8 +17,6 @@ import com.lionsquare.movilia.model.Menu;
 
 import java.util.List;
 
-import static com.lionsquare.movilia.R.id.poster;
-
 /**
  * Created by edgararana on 06/02/17.
  */
@@ -40,7 +38,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.Vh> {
 
     @Override
     public MenuAdapter.Vh onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.custom_row, parent, false);
+        View view = inflater.inflate(R.layout.custom_row_menu, parent, false);
 
         return new MenuAdapter.Vh(view);
     }
