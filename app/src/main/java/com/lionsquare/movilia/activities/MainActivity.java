@@ -2,6 +2,7 @@ package com.lionsquare.movilia.activities;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -100,6 +101,5 @@ public class MainActivity extends AppCompatActivity implements MenuAdapter.Click
 
     @Override
     public void itemClicked(int position) {
-
     }
 }

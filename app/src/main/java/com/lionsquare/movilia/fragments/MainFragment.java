@@ -1,6 +1,7 @@
 package com.lionsquare.movilia.fragments;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.lionsquare.movilia.R;
+import com.lionsquare.movilia.activities.MainActivity;
+import com.lionsquare.movilia.activities.MapsActivity;
 import com.lionsquare.movilia.custom_adapter.MainAdapter;
 import com.lionsquare.movilia.model.Celulares;
 
@@ -90,6 +93,7 @@ public class MainFragment extends Fragment implements MainAdapter.ClickListener 
 
     @Override
     public void itemClicked(int position) {
-
+        Intent iMap = new Intent(getActivity(), MapsActivity.class);
+        startActivity(iMap);
     }
 }
