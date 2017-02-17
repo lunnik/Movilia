@@ -5,12 +5,12 @@
     <color name="colorAccent">#FF4081</color>
 
 
-    <color name="primary_dark_act">#006D5B</color>
+    <color name="primary_dark_act">#13739e</color>
     <color name="primary_act">#AFAFAF</color>
     <color name="text_color_act">#FF0000</color>
-    <color name="accent_act">#006D5B</color>
+    <color name="accent_act">#1991c7</color>
     <color name="window_color_act">#AFAFAF</color>
-    <color name="bar_color_act">#006D5B</color>
+    <color name="bar_color_act">#1991c7</color>
     <color name="menu_color">#000000</color>
     <color name="white">#ffffff</color>
 
