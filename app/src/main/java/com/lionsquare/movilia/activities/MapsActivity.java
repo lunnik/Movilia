@@ -16,6 +16,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.lionsquare.fbutton.FButton;
 import com.lionsquare.movilia.R;
 
 import java.util.HashMap;
@@ -23,11 +24,15 @@ import java.util.HashMap;
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
     private GoogleMap googleMap;
     private HashMap<Marker, Integer> mHashMap = new HashMap<Marker, Integer>();
+    private FButton mApBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+
+        mApBtn = (FButton) findViewById(R.id.f_map_button);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) ==
                 PackageManager.PERMISSION_GRANTED &&

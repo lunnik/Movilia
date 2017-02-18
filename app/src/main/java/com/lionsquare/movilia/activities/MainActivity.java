@@ -2,11 +2,6 @@ package com.lionsquare.movilia.activities;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
-import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,15 +9,15 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
+
 import android.widget.TextView;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
+
 import com.lionsquare.movilia.R;
-import com.lionsquare.movilia.custom_adapter.MainAdapter;
+
 import com.lionsquare.movilia.custom_adapter.MenuAdapter;
 import com.lionsquare.movilia.fragments.MainFragment;
-import com.lionsquare.movilia.model.Celulares;
+
 import com.lionsquare.movilia.model.Menu;
 
 import java.util.ArrayList;
