@@ -6,30 +6,113 @@
     android:id="@+id/activity_maps"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lionsquare.movilia.activities.MapsActivity">
-
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/map"
         class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginBottom="50dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <FrameLayout
+        android:id="@+id/basic_button"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="15dp">
+
+        <com.lionsquare.fbutton.FButton
+            android:id="@+id/primary_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_margin="10dp"
+            android:minHeight="@dimen/demo_button_min_height"
+            android:minWidth="@dimen/demo_button_min_width"
+            android:text="Primary Button"
+            android:textColor="@android:color/white"
+            fbutton:buttonColor="@color/fbutton_color_turquoise"
+            fbutton:shadowEnabled="true" />
+
+        <com.lionsquare.fbutton.FButton
+            android:id="@+id/warning_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_margin="10dp"
+            android:minHeight="@dimen/demo_button_min_height"
+            android:minWidth="@dimen/demo_button_min_width"
+            android:text="Warning Button"
+            android:textColor="@android:color/white"
+            fbutton:buttonColor="@color/fbutton_color_sun_flower"
+            fbutton:shadowEnabled="true" />
+
+        <com.lionsquare.fbutton.FButton
+            android:id="@+id/success_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:layout_margin="10dp"
+            android:minHeight="@dimen/demo_button_min_height"
+            android:minWidth="@dimen/demo_button_min_width"
+            android:text="Success Button"
+            android:textColor="@android:color/white"
+            fbutton:buttonColor="@color/fbutton_color_emerald"
+            fbutton:shadowEnabled="true" />
+
+        <com.lionsquare.fbutton.FButton
+            android:id="@+id/inverse_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_margin="10dp"
+            android:minHeight="@dimen/demo_button_min_height"
+            android:minWidth="@dimen/demo_button_min_width"
+            android:text="Inverse Button"
+            android:textColor="@android:color/white"
+            fbutton:buttonColor="@color/fbutton_color_wet_asphalt"
+            fbutton:shadowEnabled="true" />
+
+        <com.lionsquare.fbutton.FButton
+            android:id="@+id/danger_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_margin="10dp"
+            android:minHeight="@dimen/demo_button_min_height"
+            android:minWidth="@dimen/demo_button_min_width"
+            android:text="Danger Button"
+            android:textColor="@android:color/white"
+            fbutton:buttonColor="@color/fbutton_color_alizarin"
+            fbutton:shadowEnabled="true" />
+
+        <com.lionsquare.fbutton.FButton
+            android:id="@+id/disabled_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="10dp"
+            android:minHeight="@dimen/demo_button_min_height"
+            android:minWidth="@dimen/demo_button_min_width"
+            android:text="Disabled Button"
+            android:textColor="@android:color/white" />
+
+    </FrameLayout>
 
     <com.lionsquare.fbutton.FButton
         android:id="@+id/f_map_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:drawableLeft="@android:drawable/ic_dialog_map"
         android:drawablePadding="0dp"
-        android:minHeight="80dp"
+        android:minHeight="50dp"
         android:minWidth="250dp"
         android:text="Twitter"
         android:textColor="@android:color/white"
-        fbutton:buttonColor="@color/fbutton_color_alizarin"
+        fbutton:buttonColor="@color/primary_act"
         fbutton:cornerRadius="15dp"
         fbutton:shadowEnabled="true"
         fbutton:shadowHeight="6dp" />
